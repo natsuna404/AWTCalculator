@@ -11,13 +11,24 @@ public class CalButton extends Button {
 	public final int m_width = 120;
 	public final int m_height = 60;
 	
-	public CalButton(int posX, int posY, String label){
+	private CalTextField entryField;
+	
+	public CalButton(int posX, int posY, String label, CalTextField txt){
 		this.m_posX = posX;
 		this.m_posY = posY;
-		
+		this.entryField = txt;
 		
 		setBounds(m_posX, m_posY, m_width, m_height);
 		setLabel(label);
+		
+		
+		addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				entryField.setText("Hello World");
+				
+			}
+		});
 		
 	}
 

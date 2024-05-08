@@ -4,37 +4,38 @@ public class Main {
 	public static void main(String[] args) {
 		CalWindow window  = new CalWindow(500, 600);
 		
+		CalTextField entryField = new CalTextField(0, 180, 450, 50);
 		
-		CalButton btnNegate = new CalButton(10 ,530, "+/-");
-		CalButton btn0 = new CalButton(130,530, "0");
-		CalButton btnDot = new CalButton(250,530, ".");
-		CalButton btnEquals = new CalButton(370,530, "=");
+		CalButton btnNegate = new CalButton(10 ,530, "+/-", entryField);
+		CalButton btn0 = new CalButton(130,530, "0", entryField);
+		CalButton btnDot = new CalButton(250,530, ".", entryField);
+		CalButton btnEquals = new CalButton(370,530, "=", entryField);
 
-		CalButton btn1 = new CalButton(10,460, "1");
-		CalButton btn2 = new CalButton(130,460, "2");
-		CalButton btn3 = new CalButton(250,460, "3");
-		CalButton btnPlus = new CalButton(370,460, "+");
+		CalButton btn1 = new CalButton(10,460, "1", entryField);
+		CalButton btn2 = new CalButton(130,460, "2", entryField);
+		CalButton btn3 = new CalButton(250,460, "3", entryField);
+		CalButton btnPlus = new CalButton(370,460, "+", entryField);
 		
 		
-		CalButton btn4 = new CalButton(10,390, "4");
-		CalButton btn5 = new CalButton(130,390, "5");
-		CalButton btn6 = new CalButton(250,390, "6");
-		CalButton btnMinus = new CalButton(370,390, "-");
+		CalButton btn4 = new CalButton(10,390, "4", entryField);
+		CalButton btn5 = new CalButton(130,390, "5", entryField);
+		CalButton btn6 = new CalButton(250,390, "6", entryField);
+		CalButton btnMinus = new CalButton(370,390, "-", entryField);
 		
 		
-		CalButton btn7 = new CalButton(10,320, "7");
-		CalButton btn8 = new CalButton(130,320, "8");
-		CalButton btn9 = new CalButton(250,320, "9");
-		CalButton btnMultiply = new CalButton(370,320, "X");
+		CalButton btn7 = new CalButton(10,320, "7", entryField);
+		CalButton btn8 = new CalButton(130,320, "8", entryField);
+		CalButton btn9 = new CalButton(250,320, "9", entryField);
+		CalButton btnMultiply = new CalButton(370,320, "X", entryField);
 		
 		
-		CalButton btnDivide = new CalButton(370, 250, "/");
-		CalButton btnPercent = new CalButton(250, 250, "%");
-		CalButton btnC = new CalButton(130, 250, "C");
-		CalButton btnCE = new CalButton(10, 250, "CE"); // Clear Entry
+		CalButton btnDivide = new CalButton(370, 250, "/", entryField);
+		CalButton btnPercent = new CalButton(250, 250, "%", entryField);
+		CalButton btnC = new CalButton(130, 250, "C", entryField);
+		CalButton btnCE = new CalButton(10, 250, "CE", entryField); // Clear Entry
 		
 		
-		
+//		window.add(entryText);
 		
 		window.add(btnNegate);
 		window.add(btn0);
@@ -61,6 +62,7 @@ public class Main {
 		window.add(btnC);
 		window.add(btnCE);
 		
+		window.add(entryField);
 		
 		
 	}
