@@ -6,14 +6,18 @@ import java.awt.event.*;
 
 public class CalWindow extends Frame {
 	
+	private int m_width;
+	private int m_height;
 	
-	public CalWindow(){
+	public CalWindow(int width, int height){
 		
+		this.m_height = height;
+		this.m_width = width;
 		
 		setLayout(null);
 		
 		// Sets the position and the width and height of the window
-		setBounds(300, 300, 1280, 720);
+		setBounds(0, 0, m_width, m_height);
 		
 		// Makes sure that this window is visible
 		setVisible(true);
